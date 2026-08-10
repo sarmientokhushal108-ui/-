@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>个人AI销售作战系统</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand"><span>AI</span><div><strong>销售作战系统</strong><small>军工自动化 · 第一版原型</small></div></div>
+        <nav class="nav">
+          <a class="active" href="#dashboard">工作台</a>
+          <a href="#customers">客户管理</a>
+          <a href="#projects">项目看板</a>
+          <a href="#followups">跟进记录</a>
+          <a href="#reviews">销售复盘</a>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Personal AI Operating System</p>
+            <h1>个人AI销售作战系统</h1>
+          </div>
+          <div class="top-actions">
+            <input type="search" placeholder="搜索客户、项目、联系人" />
+            <button>AI助手</button>
+          </div>
+        </header>
+
+        <section id="dashboard" class="page-section">
+          <div class="section-title"><div><p class="eyebrow">Dashboard</p><h2>工作台</h2></div><button>生成今日计划</button></div>
+          <div class="stats-grid">
+            <article><strong>42</strong><span>客户总数</span></article>
+            <article><strong>16</strong><span>进行中项目</span></article>
+            <article><strong>860万</strong><span>预计成交金额</span></article>
+            <article><strong>7</strong><span>需跟进客户</span></article>
+          </div>
+          <div class="dashboard-grid">
+            <article class="card"><h3>今日待办</h3><ul><li>给XX研究所张工回电话</li><li>提交自动化测试台初步方案</li><li>整理明日技术交流材料</li></ul></article>
+            <article class="card"><h3>本周重点项目</h3><ul><li>XX测试台建设项目 · 方案设计</li><li>XX控制系统升级项目 · 技术交流</li><li>XX产线自动化改造 · 报价</li></ul></article>
+            <article class="card warning"><h3>风险提醒</h3><ul><li>XX项目缺少采购联系人</li><li>XX报价后已8天未反馈</li><li>XX投标节点临近</li></ul></article>
+            <article class="card ai"><h3>AI今日建议</h3><p>优先推进A类客户的方案确认；对报价阶段项目补充预算、竞品与决策链信息。</p></article>
+          </div>
+        </section>
+
+        <section id="customers" class="page-section">
+          <div class="section-title"><div><p class="eyebrow">Customers</p><h2>客户管理</h2></div><button>+ 新增客户</button></div>
+          <div class="toolbar"><input placeholder="客户名称" /><select><option>全部类型</option><option>研究所</option><option>军工集团</option><option>生产单位</option></select><select><option>全部等级</option><option>A类</option><option>B类</option><option>C类</option></select></div>
+          <table><thead><tr><th>客户名称</th><th>类型</th><th>等级</th><th>地区</th><th>主要联系人</th><th>最近跟进</th><th>操作</th></tr></thead><tbody><tr><td>XX研究所</td><td>研究所</td><td><span class="tag hot">A类</span></td><td>北京</td><td>张工 / 技术部</td><td>2026-08-09</td><td><button class="ghost">查看</button></td></tr><tr><td>XX装备制造厂</td><td>生产单位</td><td><span class="tag">B类</span></td><td>西安</td><td>李主任 / 装备部</td><td>2026-08-05</td><td><button class="ghost">查看</button></td></tr></tbody></table>
+        </section>
+
+        <section id="projects" class="page-section">
+          <div class="section-title"><div><p class="eyebrow">Pipeline</p><h2>项目看板</h2></div><button>+ 新增项目</button></div>
+          <div class="kanban">
+            <div class="lane"><h3>线索</h3><div class="project-card"><b>某测试需求线索</b><span>客户：XX集团</span><span>概率：20%</span></div></div>
+            <div class="lane"><h3>需求调研</h3><div class="project-card"><b>控制系统升级</b><span>客户：XX厂</span><span>金额：80万</span></div></div>
+            <div class="lane"><h3>技术交流</h3><div class="project-card"><b>产线自动化改造</b><span>客户：XX所</span><span>风险：指标未定</span></div></div>
+            <div class="lane"><h3>方案设计</h3><div class="project-card accent"><b>自动化测试台建设</b><span>客户：XX研究所</span><span>金额：200万 · 概率60%</span><span>下一步：提交方案</span></div></div>
+            <div class="lane"><h3>报价</h3><div class="project-card"><b>数据采集系统</b><span>客户：XX基地</span><span>金额：120万</span></div></div>
+            <div class="lane"><h3>投标</h3></div><div class="lane"><h3>合同</h3></div><div class="lane"><h3>交付</h3></div>
+          </div>
+        </section>
+
+        <section id="followups" class="page-section">
+          <div class="section-title"><div><p class="eyebrow">Follow-up</p><h2>跟进记录</h2></div><button>+ 新增跟进</button></div>
+          <div class="form-card"><h3>新增跟进原型</h3><div class="form-grid"><label>客户<input value="XX研究所" /></label><label>项目<input value="自动化测试台建设" /></label><label>联系人<input value="张工" /></label><label>方式<select><option>现场拜访</option><option>电话</option><option>微信</option></select></label></div><label>沟通内容<textarea>客户关注系统稳定性、交付周期和国产化程度，希望两周内看到初步方案。</textarea></label><div class="button-row"><button>AI总结</button><button class="ghost">保存并生成任务</button></div></div>
+        </section>
+
+        <section id="reviews" class="page-section">
+          <div class="section-title"><div><p class="eyebrow">Review</p><h2>销售复盘</h2></div><button>+ 新增复盘</button></div>
+          <div class="review-grid"><article class="card"><h3>赢单复盘</h3><p>总结技术方案、关系推进、关键节点与可复用打法。</p><button class="ghost">AI生成复盘</button></article><article class="card"><h3>输单复盘</h3><p>记录失败原因、客户反馈、竞品优势与后续补救计划。</p><button class="ghost">创建复盘</button></article><article class="card"><h3>阶段复盘</h3><p>对报价、投标、合同等关键阶段进行过程复盘。</p><button class="ghost">开始复盘</button></article></div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
